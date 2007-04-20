@@ -5,7 +5,7 @@
 
 Summary:	%{_pearname} - handles talking to timsieved
 Name:		php-pear-%{_pearname}
-Version:	1.1.2
+Version:	1.1.5
 Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
@@ -77,5 +77,3 @@ rm -rf %{buildroot}
 %doc %{_pearname}-%{version}/test_sieve.php
 %{_datadir}/pear/%{_class}/*.php
 %{_datadir}/pear/packages/%{_pearname}.xml
-
-
