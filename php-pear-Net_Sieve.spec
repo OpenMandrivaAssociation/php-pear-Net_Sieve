@@ -3,14 +3,17 @@
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
+%define _requires_exceptions pear(password.inc.php)
+
 Summary:	%{_pearname} - handles talking to timsieved
 Name:		php-pear-%{_pearname}
 Version:	1.1.5
 Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tar.bz2
 URL:		http://pear.php.net/package/Net_Sieve/
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tar.bz2
+Patch0:		Net_Sieve-Sieve_fix.diff
 Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
@@ -28,6 +31,7 @@ In PEAR status of this package is: %{_status}.
 %prep
 
 %setup -q -c
+%patch0 -p0
 
 find . -type d -perm 0700 -exec chmod 755 {} \;
 find . -type f -perm 0555 -exec chmod 755 {} \;
@@ -45,7 +49,7 @@ rm -rf %{buildroot}
 
 install -d %{buildroot}%{_datadir}/pear/%{_class}
 
-install %{_pearname}-%{version}/*.php %{buildroot}%{_datadir}/pear/%{_class}
+install %{_pearname}-%{version}/Sieve.php %{buildroot}%{_datadir}/pear/%{_class}
 
 install -d %{buildroot}%{_datadir}/pear/packages
 install -m0644 package.xml %{buildroot}%{_datadir}/pear/packages/%{_pearname}.xml
@@ -74,6 +78,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/test_sieve.php
+%doc %{_pearname}-%{version}/SieveTest.php
+%doc %{_pearname}-%{version}/largescript.siv
 %{_datadir}/pear/%{_class}/*.php
 %{_datadir}/pear/packages/%{_pearname}.xml
