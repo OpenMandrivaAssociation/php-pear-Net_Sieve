@@ -3,12 +3,12 @@
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
-%define _requires_exceptions pear(password.inc.php)
+%define _requires_exceptions pear(password.inc.php)\\|pear(PHPUnit2
 
 Summary:	%{_pearname} - handles talking to timsieved
 Name:		php-pear-%{_pearname}
 Version:	1.1.5
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/Net_Sieve/
