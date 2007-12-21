@@ -20,6 +20,7 @@ Requires:	php-pear
 Requires:	php-pear-Net_Socket >= 1.0
 BuildArch:	noarch
 BuildRequires:	dos2unix
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Provides an API to talk to the timsieved server that comes with Cyrus
