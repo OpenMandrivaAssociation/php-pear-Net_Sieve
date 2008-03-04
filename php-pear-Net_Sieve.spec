@@ -8,7 +8,7 @@
 Summary:	%{_pearname} - handles talking to timsieved
 Name:		php-pear-%{_pearname}
 Version:	1.1.5
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/Net_Sieve/
