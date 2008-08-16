@@ -7,12 +7,12 @@
 
 Summary:	%{_pearname} - handles talking to timsieved
 Name:		php-pear-%{_pearname}
-Version:	1.1.5
-Release:	%mkrel 4
+Version:	1.1.6
+Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/Net_Sieve/
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tar.bz2
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 Patch0:		Net_Sieve-Sieve_fix.diff
 Requires(post): php-pear
 Requires(preun): php-pear
@@ -20,7 +20,7 @@ Requires:	php-pear
 Requires:	php-pear-Net_Socket >= 1.0
 BuildArch:	noarch
 BuildRequires:	dos2unix
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Provides an API to talk to the timsieved server that comes with Cyrus
