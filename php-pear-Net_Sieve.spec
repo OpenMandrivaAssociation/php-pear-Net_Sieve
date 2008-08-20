@@ -31,7 +31,10 @@ In PEAR status of this package is: %{_status}.
 %prep
 
 %setup -q -c
+
+pushd %{_pearname}-%{version}
 %patch0 -p0
+popd
 
 find . -type d -perm 0700 -exec chmod 755 {} \;
 find . -type f -perm 0555 -exec chmod 755 {} \;
