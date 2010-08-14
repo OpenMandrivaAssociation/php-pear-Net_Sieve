@@ -5,14 +5,13 @@
 %define _requires_exceptions pear(password.inc.php)\\|pear(PHPUnit2
 
 Name:		php-pear-%{upstream_name}
-Version:	1.1.7
-Release:	%mkrel 2
+Version:	1.3.0
+Release:	%mkrel 1
 Summary:	Handles talking to timsieved
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/Net_Sieve/
 Source0:	http://download.pear.php.net/package/%{upstream_name}-%{version}.tgz
-Patch:		php-pear-Net_Sieve-1.1.7-fix-path.patch
 Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
@@ -27,7 +26,6 @@ IMAPd. Can be used to install, remove, mark active etc sieve scripts.
 
 %prep
 %setup -q -c
-%patch -p 1
 mv package.xml %{upstream_name}-%{version}/%{upstream_name}.xml
 
 %install
@@ -62,7 +60,5 @@ fi
 
 %files
 %defattr(-,root,root)
-%doc %{upstream_name}-%{version}/SieveTest.php
-%doc %{upstream_name}-%{version}/largescript.siv
 %{_datadir}/pear/%{_class}
 %{_datadir}/pear/packages/%{upstream_name}.xml
