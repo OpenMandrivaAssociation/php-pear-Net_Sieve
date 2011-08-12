@@ -5,8 +5,8 @@
 %define _requires_exceptions pear(password.inc.php)\\|pear(PHPUnit2
 
 Name:		php-pear-%{upstream_name}
-Version:	1.3.0
-Release:	%mkrel 2
+Version:	1.3.2
+Release:	%mkrel 1
 Summary:	Handles talking to timsieved
 License:	PHP License
 Group:		Development/PHP
