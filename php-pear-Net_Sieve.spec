@@ -2,8 +2,6 @@
 %define		_subclass	Sieve
 %define		upstream_name	%{_class}_%{_subclass}
 
-%define _requires_exceptions pear(password.inc.php)\\|pear(PHPUnit2
-
 Name:		php-pear-%{upstream_name}
 Version:	1.3.0
 Release:	%mkrel 3
