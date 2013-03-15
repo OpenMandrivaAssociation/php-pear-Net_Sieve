@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	1.3.0
-Release:	%mkrel 3
+Release:	4
 Summary:	Handles talking to timsieved
 License:	PHP License
 Group:		Development/PHP
@@ -16,7 +16,6 @@ Requires:	php-pear
 Requires:	php-pear-Net_Socket >= 1.0
 BuildArch:	noarch
 BuildRequires:	php-pear
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Provides an API to talk to the timsieved server that comes with Cyrus
@@ -27,7 +26,6 @@ IMAPd. Can be used to install, remove, mark active etc sieve scripts.
 mv package.xml %{upstream_name}-%{version}/%{upstream_name}.xml
 
 %install
-rm -rf %{buildroot}
 
 cd %{upstream_name}-%{version}
 pear install --nodeps --packagingroot %{buildroot} %{upstream_name}.xml
@@ -40,7 +38,6 @@ install -d %{buildroot}%{_datadir}/pear/packages
 install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 %clean
-rm -rf %{buildroot}
 
 
 
