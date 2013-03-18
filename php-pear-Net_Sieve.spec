@@ -3,13 +3,13 @@
 %define		upstream_name	%{_class}_%{_subclass}
 
 Name:		php-pear-%{upstream_name}
-Version:	1.3.0
-Release:	4
+Version:	1.3.2
+Release:	1
 Summary:	Handles talking to timsieved
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/Net_Sieve/
-Source0:	http://download.pear.php.net/package/%{upstream_name}-%{version}.tgz
+Source0:	http://download.pear.php.net/package/Net_Sieve-%{version}.tgz
 Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
@@ -131,4 +131,5 @@ install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 * Thu Jan 20 2005 Pascal Terjan <pterjan@mandrake.org> 1.1.0-1mdk
 - First mdk package
+
 
