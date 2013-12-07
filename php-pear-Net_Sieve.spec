@@ -5,7 +5,7 @@
 Summary:	Handles talking to timsieved
 Name:		php-pear-%{modname}
 Version:	1.3.2
-Release:	4
+Release:	5
 License:	PHP License
 Group:		Development/PHP
 Url:		http://pear.php.net/package/Net_Sieve/
