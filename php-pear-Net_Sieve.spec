@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	1.3.2
-Release:	1
+Release:	2
 Summary:	Handles talking to timsieved
 License:	PHP License
 Group:		Development/PHP
