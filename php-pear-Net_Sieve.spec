@@ -8,7 +8,7 @@ Version:	1.4.4
 Release:	2
 License:	PHP License
 Group:		Development/PHP
-Url:		http://pear.php.net/package/Net_Sieve/
+Url:		https://pear.php.net/package/Net_Sieve/
 Source0:	http://download.pear.php.net/package/Net_Sieve-%{version}.tgz
 BuildArch:	noarch
 BuildRequires:	php-pear
